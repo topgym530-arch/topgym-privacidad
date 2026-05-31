@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Política de Privacidad — Top Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --accent: #003BBE;
+      --accent-light: #e8eeff;
+      --text: #0f1523;
+      --muted: #4a5568;
+      --border: #dde3f0;
+      --bg: #f7f9ff;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--accent);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 24px,
+        rgba(255,255,255,0.03) 24px,
+        rgba(255,255,255,0.03) 48px
+      );
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      color: var(--accent);
+      letter-spacing: -1px;
+    }
+
+    .brand-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: 6px;
+      color: #fff;
+    }
+
+    header h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: clamp(20px, 4vw, 28px);
+      color: rgba(255,255,255,0.92);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .meta {
+      margin-top: 10px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 400;
+      position: relative;
+    }
+
+    /* ── LAYOUT ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── INTRO BADGE ── */
+    .intro-card {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    /* ── SECCIONES ── */
+    .section {
+      margin-bottom: 36px;
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .section-header {
+      background: var(--accent);
+      padding: 14px 24px;
+    }
+
+    .section-header h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .section-body {
+      padding: 24px;
+    }
+
+    .section-body p,
+    .section-body li {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .section-body p + p { margin-top: 14px; }
+
+    .section-body ul,
+    .section-body ol {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .section-body li { margin-bottom: 6px; }
+
+    /* Sub-secciones con letra (A., B., C.) */
+    .subsection {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .subsection:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .subsection-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    /* ── CONTACTO ── */
+    .contact-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-box h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      color: var(--text);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .contact-item {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .contact-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: #aab0c0;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 32px 16px 60px; }
+      .section-body { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-mark">TG</div>
+    <span class="brand-name">TOP GYM</span>
+  </div>
+  <h1>Política de Privacidad y Tratamiento de Datos Personales</h1>
+  <p class="meta">RUC N.° 10732212332 &nbsp;·&nbsp; Arequipa, Perú &nbsp;·&nbsp; Última actualización: Enero 2026</p>
+</header>
+
+<main>
+
+  <div class="intro-card">
+    Al inscribirse, renovar una membresía, registrarse en la aplicación, realizar un pago o utilizar los servicios de Top Gym, el USUARIO declara haber leído, entendido y aceptado la presente Política de Privacidad, conforme a la Ley N.° 29733 — Ley de Protección de Datos Personales del Perú.
+  </div>
+
+  <!-- PRIMERA -->
+  <div class="section">
+    <div class="section-header"><h2>Primera: Aceptación de la Política</h2></div>
+    <div class="section-body">
+      <p>Al inscribirse, renovar una membresía, llenar una ficha, registrarse en la aplicación, realizar un pago, ingresar a las instalaciones o utilizar los servicios de Top Gym, EL USUARIO declara haber leído, entendido y aceptado la presente Política de Privacidad y Tratamiento de Datos Personales.</p>
+      <p>EL USUARIO autoriza a Top Gym a recopilar, registrar, almacenar, usar, conservar y tratar sus datos personales para las finalidades indicadas en este documento, conforme a la Ley N.° 29733 - Ley de Protección de Datos Personales, su Reglamento y demás normas aplicables en el Perú.</p>
+      <p>En caso de menores de edad, la autorización para el tratamiento de sus datos personales será otorgada por su padre, madre o apoderado responsable.</p>
+    </div>
+  </div>
+
+  <!-- SEGUNDA -->
+  <div class="section">
+    <div class="section-header"><h2>Segunda: Datos Personales que Top Gym puede recopilar</h2></div>
+    <div class="section-body">
+      <div class="subsection">
+        <div class="subsection-title">A. Datos de Identificación</div>
+        <ul>
+          <li>Nombres y apellidos</li>
+          <li>DNI, Carné de Extranjería, pasaporte u otro documento válido</li>
+          <li>Fecha de nacimiento y edad</li>
+          <li>Nacionalidad y firma física o digital</li>
+          <li>Fotografía del usuario, cuando sea necesaria para validar identidad o evitar suplantaciones</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">B. Datos de Contacto</div>
+        <ul>
+          <li>Número de celular</li>
+          <li>Correo electrónico</li>
+          <li>Dirección de domicilio, solo cuando sea necesaria para registro o gestión administrativa</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">C. Datos de Membresía y Servicio</div>
+        <ul>
+          <li>Fecha de inscripción, tipo de plan, inicio y vencimiento de membresía</li>
+          <li>Historial de renovaciones y registro de ingresos y asistencias</li>
+          <li>Estado de la membresía: activa, vencida, suspendida, cancelada o bloqueada</li>
+          <li>Observaciones administrativas, incidencias, llamadas de atención o suspensiones</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">D. Datos de Pago</div>
+        <ul>
+          <li>Monto pagado, fecha de pago y medio de pago utilizado</li>
+          <li>Comprobante de pago y datos para emisión de boletas o facturas</li>
+          <li>Top Gym no almacena datos completos de tarjetas bancarias cuando el pago se realiza mediante bancos, POS o pasarelas de pago externas</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">E. Datos de Salud o Condición Física</div>
+        <p>Top Gym podrá recopilar información que EL USUARIO entregue voluntariamente sobre lesiones, limitaciones físicas, enfermedades o cualquier condición que pueda influir en su entrenamiento. Esta información se usa únicamente para brindar mejor orientación y reducir riesgos.</p>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">F. Datos de Menores de Edad</div>
+        <p>Cuando el usuario sea menor de edad, Top Gym podrá recopilar nombres, edad, documento de identidad cuando corresponda, y datos del padre, madre o apoderado, junto con la autorización para la inscripción y uso del servicio.</p>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">G. Imágenes y Videos de Seguridad</div>
+        <p>Top Gym podrá captar imágenes y videos mediante cámaras de seguridad ubicadas en zonas comunes, ingresos, recepción y áreas de entrenamiento, conforme a la Sección Cuarta de esta Política.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERCERA -->
+  <div class="section">
+    <div class="section-header"><h2>Tercera: Finalidad del Tratamiento de Datos</h2></div>
+    <div class="section-body">
+      <div class="subsection">
+        <div class="subsection-title">A. Gestión de Membresía y Prestación del Servicio</div>
+        <ul>
+          <li>Registrar al usuario y crear o actualizar su ficha</li>
+          <li>Activar, renovar, suspender o cancelar membresías</li>
+          <li>Verificar pagos, deudas y vencimientos</li>
+          <li>Controlar el ingreso al gimnasio y validar la identidad del usuario</li>
+          <li>Evitar préstamo, venta, suplantación o uso indebido de membresías</li>
+          <li>Gestionar consultas, reclamos, incidencias o solicitudes</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">B. Seguridad y Control Interno</div>
+        <ul>
+          <li>Proteger a usuarios, trabajadores e instalaciones</li>
+          <li>Prevenir robos, daños, agresiones, fraudes o suplantaciones</li>
+          <li>Sustentar llamadas de atención, suspensiones o cancelaciones cuando corresponda</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">C. Orientación y Prevención de Riesgos</div>
+        <p>Top Gym no reemplaza una evaluación médica profesional. EL USUARIO es responsable de consultar con un médico si tiene dudas sobre su capacidad para entrenar.</p>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">D. Pagos y Obligaciones Administrativas</div>
+        <ul>
+          <li>Registrar pagos y emitir comprobantes</li>
+          <li>Controlar deudas o saldos pendientes</li>
+          <li>Cumplir obligaciones contables, tributarias o administrativas</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <div class="subsection-title">E. Comunicaciones</div>
+        <p>Top Gym podrá comunicarse con EL USUARIO mediante llamada, WhatsApp, SMS, correo electrónico o la aplicación para informar sobre vencimientos, pagos pendientes, renovaciones, cambios de horario, cierres o promociones. EL USUARIO podrá solicitar dejar de recibir comunicaciones comerciales.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUARTA -->
+  <div class="section">
+    <div class="section-header"><h2>Cuarta: Uso de Imágenes, Videos y Cámaras de Seguridad</h2></div>
+    <div class="section-body">
+      <p>Top Gym podrá utilizar cámaras de seguridad en zonas comunes, ingresos, recepción, pasillos y áreas de entrenamiento para proteger la seguridad de los usuarios, trabajadores, bienes e instalaciones.</p>
+      <p>Las imágenes y videos podrán ser revisados por personal autorizado y utilizados para sustentar medidas internas, atender reclamos o entregar información a autoridades competentes cuando corresponda.</p>
+      <p>Cuando EL USUARIO aparezca de manera secundaria o incidental dentro de una toma del gimnasio, se entenderá que no existe uso individual de su imagen. Cuando Top Gym desee usar la imagen de EL USUARIO como protagonista principal de una campaña o publicación, solicitará autorización previa.</p>
+    </div>
+  </div>
+
+  <!-- QUINTA -->
+  <div class="section">
+    <div class="section-header"><h2>Quinta: Compartición de Datos</h2></div>
+    <div class="section-body">
+      <p>Top Gym podrá compartir datos personales solo cuando sea necesario para cumplir las finalidades indicadas en esta Política o cuando exista una obligación legal. Los datos podrán ser compartidos con:</p>
+      <ul>
+        <li>Personal administrativo, de recepción y entrenadores de Top Gym</li>
+        <li>Proveedores de sistema, aplicación, almacenamiento o soporte técnico</li>
+        <li>Bancos, POS o pasarelas de pago utilizados por EL USUARIO</li>
+        <li>Contadores, asesores legales o administrativos de Top Gym</li>
+        <li>Autoridades administrativas, policiales, judiciales o tributarias cuando corresponda</li>
+        <li>Centros de salud en caso de accidente o emergencia dentro del gimnasio</li>
+      </ul>
+      <p style="margin-top:14px; font-weight:600; color: var(--text);">Top Gym no vende, alquila ni comercializa bases de datos personales de sus usuarios.</p>
+    </div>
+  </div>
+
+  <!-- SEXTA -->
+  <div class="section">
+    <div class="section-header"><h2>Sexta: Conservación de Datos</h2></div>
+    <div class="section-body">
+      <p>Top Gym conservará los datos personales durante el tiempo necesario para cumplir las finalidades de esta Política, incluyendo mientras exista membresía activa, pagos pendientes, reclamos en curso o mientras sea necesario para cumplir obligaciones legales o defender los derechos de Top Gym.</p>
+      <p>Cuando los datos ya no sean necesarios, Top Gym podrá eliminarlos, bloquearlos o archivarlos según lo permitido por ley.</p>
+    </div>
+  </div>
+
+  <!-- SÉPTIMA -->
+  <div class="section">
+    <div class="section-header"><h2>Séptima: Seguridad de los Datos</h2></div>
+    <div class="section-body">
+      <p>Top Gym adoptará medidas razonables para proteger los datos personales contra pérdida, robo, uso indebido, acceso no autorizado o alteración. Estas medidas incluyen acceso restringido, control de permisos, respaldo de información, almacenamiento seguro y confidencialidad del personal.</p>
+      <p>EL USUARIO reconoce que ningún sistema es completamente invulnerable. Sin embargo, Top Gym se compromete a aplicar medidas razonables para proteger la información bajo su responsabilidad.</p>
+    </div>
+  </div>
+
+  <!-- OCTAVA -->
+  <div class="section">
+    <div class="section-header"><h2>Octava: Derechos del Usuario</h2></div>
+    <div class="section-body">
+      <p>EL USUARIO podrá ejercer sus derechos de acceso, rectificación, cancelación y oposición respecto de sus datos personales. Esto significa que podrá solicitar:</p>
+      <ul>
+        <li>Saber qué datos tiene Top Gym sobre su persona</li>
+        <li>Corregir datos incorrectos o desactualizados</li>
+        <li>Cancelar datos cuando ya no sean necesarios</li>
+        <li>Oponerse al uso de sus datos cuando corresponda</li>
+        <li>Revocar autorizaciones para finalidades no necesarias, como comunicaciones comerciales</li>
+      </ul>
+      <p style="margin-top:14px;">Para ejercer estos derechos, EL USUARIO deberá presentar una solicitud indicando: nombres y apellidos, documento de identidad, derecho que desea ejercer y descripción clara del pedido.</p>
+    </div>
+  </div>
+
+  <!-- NOVENA -->
+  <div class="section">
+    <div class="section-header"><h2>Novena: Veracidad de los Datos y Suplantación de Identidad</h2></div>
+    <div class="section-body">
+      <p>EL USUARIO declara que los datos entregados a Top Gym son verdaderos, completos, actualizados y corresponden a su propia identidad. Top Gym no será responsable por consecuencias generadas por datos falsos, incompletos o desactualizados.</p>
+      <p>Si se confirma falsedad, suplantación de identidad o uso irregular de la membresía, Top Gym podrá cancelar el plan sin devolución ni compensación, sin perjuicio de las acciones legales que correspondan.</p>
+    </div>
+  </div>
+
+  <!-- DÉCIMA -->
+  <div class="section">
+    <div class="section-header"><h2>Décima: Consecuencias de no Brindar Datos Necesarios</h2></div>
+    <div class="section-body">
+      <p>La entrega de ciertos datos es necesaria para registrar al usuario, validar su identidad, gestionar su membresía y controlar el acceso. Si EL USUARIO no entrega los datos necesarios o entrega datos falsos, Top Gym podrá suspender o impedir el acceso hasta que la información sea regularizada.</p>
+    </div>
+  </div>
+
+  <!-- DÉCIMA PRIMERA -->
+  <div class="section">
+    <div class="section-header"><h2>Décima Primera: Cambios en la Política</h2></div>
+    <div class="section-body">
+      <p>Top Gym podrá modificar esta Política cuando sea necesario por cambios legales, cambios en sus servicios o implementación de nuevos sistemas. Las modificaciones serán comunicadas mediante la aplicación, avisos en sede, WhatsApp o correo electrónico.</p>
+      <p>El uso continuo de los servicios de Top Gym después de comunicada la actualización implica la aceptación de la nueva versión.</p>
+    </div>
+  </div>
+
+  <!-- DÉCIMA SEGUNDA -->
+  <div class="section">
+    <div class="section-header"><h2>Décima Segunda: Declaración Final del Usuario</h2></div>
+    <div class="section-body">
+      <p>EL USUARIO declara que:</p>
+      <ul>
+        <li>Ha leído y entendido esta Política</li>
+        <li>Autoriza a Top Gym a tratar sus datos personales para las finalidades indicadas</li>
+        <li>Declara que la información entregada es verdadera y actualizada</li>
+        <li>Acepta que Top Gym use registros de membresía, pagos, asistencias e imágenes de seguridad para control interno y atención de reclamos</li>
+        <li>Reconoce que puede ejercer sus derechos sobre sus datos personales conforme a ley</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <div class="contact-box">
+    <h3>Contacto y Ejercicio de Derechos</h3>
+    <p class="contact-item">📧 Correo electrónico: <a href="mailto:topgym530@gmail.com">topgym530@gmail.com</a></p>
+    <p class="contact-item">📱 WhatsApp: <a href="https://wa.me/51922606001">+51 922 606 001</a></p>
+    <p class="contact-item">📍 Atención presencial en sede — Arequipa, Perú</p>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Top Gym · RUC N.° 10732212332 · Arequipa, Perú · Todos los derechos reservados
+</footer>
+
+</body>
+</html>
